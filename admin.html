@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Our Planet - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#manage-projects">Manage Projects</a></li>
+                <li><a href="#subscribers">Subscribers</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="content">
+            <h2 data-aos="fade-up">Overview</h2>
+            <div class="overview">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Total Projects</h3>
+                    <p>12 Active Projects</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Newsletter Subscribers</h3>
+                    <p>1,234 Subscribers</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
+                    <h3>Recent Donations</h3>
+                    <p>$45,000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manage-projects" class="content">
+            <h2 data-aos="fade-up">Manage Projects</h2>
+            <div class="project-table" data-aos="fade-up" data-aos-delay="200">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rainwater Harvesting Systems</td>
+                            <td>Active</td>
+                            <td><button>Edit</button> <button>Archive</button></td>
+                        </tr>
+                        <tr>
+                            <td>Greywater Recycling</td>
+                            <td>In Development</td>
+                            <td><button>Edit</button> <button>Archive</button></td>
+                        </tr>
+                        <tr>
+                            <td>Smart Leak Detection</td>
+                            <td>Active</td>
+                            <td><button>Edit</button> <button>Archive</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="subscribers" class="content">
+            <h2 data-aos="fade-up">Manage Subscribers</h2>
+            <div class="subscriber-table" data-aos="fade-up" data-aos-delay="200">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Date Subscribed</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>john.doe@example.com</td>
+                            <td>2024-08-15</td>
+                            <td><button>Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td>jane.smith@example.com</td>
+                            <td>2024-09-05</td>
+                            <td><button>Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="settings" class="content">
+            <h2 data-aos="fade-up">Settings</h2>
+            <div class="settings-card" data-aos="fade-up" data-aos-delay="200">
+                <form>
+                    <label for="org-name">Organization Name:</label>
+                    <input type="text" id="org-name" value="Save Our Planet">
+                    <label for="email">Admin Email:</label>
+                    <input type="email" id="email" value="admin@saveourplanet.org">
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="logout" class="content">
+            <h2 data-aos="fade-up">Logout</h2>
+            <div class="logout-card" data-aos="fade-up" data-aos-delay="200">
+                <p>Are you sure you want to logout?</p>
+                <button>Confirm Logout</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Save Our Planet - Admin Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
