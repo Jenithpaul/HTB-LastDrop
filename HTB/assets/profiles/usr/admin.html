@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Our Planet - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="C:\Users\jenit\Desktop\HTB\css\admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#manage-projects">Manage Projects</a></li>
+                <li><a href="#subscribers">Subscribers</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="section">
+            <h2>Overview</h2>
+            <div class="overview">
+                <div class="card">
+                    <i class="fas fa-project-diagram fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Total Projects</h3>
+                    <p>12 Active Projects</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Newsletter Subscribers</h3>
+                    <p>1,234 Subscribers</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-usd fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Recent Donations</h3>
+                    <p>$45,000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manage-projects" class="section">
+            <h2>Manage Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rainwater Harvesting Systems</td>
+                        <td>Active</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Greywater Recycling</td>
+                        <td>In Development</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Smart Leak Detection</td>
+                        <td>Active</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="subscribers" class="section">
+            <h2>Manage Subscribers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Date Subscribed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>john.doe@example.com</td>
+                        <td>2024-08-15</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>jane.smith@example.com</td>
+                        <td>2024-09-05</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="settings" class="section">
+            <h2>Settings</h2>
+            <form>
+                <label for="org-name">Organization Name:</label>
+                <input type="text" id="org-name" value="Save Our Planet">
+                <label for="email">Admin Email:</label>
+                <input type="email" id="email" value="admin@saveourplanet.org">
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="logout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to logout?</p>
+            <button id="confirm-logout">Yes, Logout</button>
+            <button id="cancel-logout">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Save Our Planet - Admin Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="C:\Users\jenit\Desktop\HTB\js\admin.js"></script>
+</body>
+</html>
