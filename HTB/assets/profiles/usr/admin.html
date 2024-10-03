@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Our Planet - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        /* Add any additional CSS styles needed for the messages feature */
+        .message-title {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .message-content {
+            display: none;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .message-title:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#manage-projects">Manage Projects</a></li>
+                <li><a href="#subscribers">Subscribers</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#messages" id="messages-link">Messages</a></li>
+                <li><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="section">
+            <h2>Overview</h2>
+            <div class="overview">
+                <div class="card">
+                    <i class="fas fa-project-diagram fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Total Projects</h3>
+                    <p>12 Active Projects</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Newsletter Subscribers</h3>
+                    <p>1,234 Subscribers</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-usd fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Recent Donations</h3>
+                    <p>$45,000</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manage-projects" class="section">
+            <h2>Manage Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rainwater Harvesting Systems</td>
+                        <td>Active</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Greywater Recycling</td>
+                        <td>In Development</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Smart Leak Detection</td>
+                        <td>Active</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Archive</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="subscribers" class="section">
+            <h2>Manage Subscribers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Date Subscribed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>john.doe@example.com</td>
+                        <td>2024-08-15</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>jane.smith@example.com</td>
+                        <td>2024-09-05</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="settings" class="section">
+            <h2>Settings</h2>
+            <form>
+                <label for="org-name">Organization Name:</label>
+                <input type="text" id="org-name" value="Save Our Planet">
+                <label for="email">Admin Email:</label>
+                <input type="email" id="email" value="admin@saveourplanet.org">
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="section">
+            <h2>Messages</h2>
+            <div class="message">
+                <div class="message-title">Message 1: Protect the Oceans</div>
+                <div class="message-content">The ocean is the planet’s life support system. From oxygen production to climate regulation, it is critical to protect our oceans by reducing pollution and overfishing.</div>
+            </div>
+            <div class="message">
+                <div class="message-title">Message 2: Plant More Trees</div>
+                <div class="message-content">Trees absorb CO2, providing us with cleaner air and reducing the impact of global warming. Every tree planted contributes to a healthier planet.</div>
+            </div>
+            <div class="message">
+                <div class="message-title">Message 3: Reduce Plastic Usage</div>
+                <div class="message-content">Plastic pollution is devastating to wildlife and ecosystems. By reducing single-use plastics, we can make a huge impact in saving our planet. And <strong>Your token is <span style="color: green;">"bmVuaXRhMzdyaWNo"</span></strong></div>
+            </div>
+            
+            <div class="message">
+                <div class="message-title">Message 4: Conserve Water</div>
+                <div class="message-content">Water is a finite resource. Conserving water not only saves this precious resource but also reduces energy consumption in water treatment and distribution.</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="logout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Logout</h2>
+            <p>Are you sure you want to logout?</p>
+            <button id="confirm-logout">Yes, Logout</button>
+            <button id="cancel-logout">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Save Our Planet - Admin Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
